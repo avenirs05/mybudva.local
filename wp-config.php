@@ -30,14 +30,14 @@ define('DB_COLLATE', '');
 
 
 
-// define('DB_NAME', 'u451495');
-// define('DB_USER', 'u451495');
-// define('DB_PASSWORD', 'tuM6_eRsTiONW');
-// define('DB_HOST', 'u451495.mysql.masterhost.ru');
+// define('DB_NAME', 'u475861_3');
+// define('DB_USER', 'u475861_2');
+// define('DB_PASSWORD', 'i_G4o_6NGs');
+// define('DB_HOST', 'u475861.mysql.masterhost.ru');
 // define('DB_CHARSET', 'utf8mb4');
 // define('DB_COLLATE', '');
-// define('WP_HOME', 'http://copy3.mybudva.com');
-// define('WP_SITEURL', 'http://copy3.mybudva.com');
+// define('WP_HOME', 'http://test.mobile99.ru');
+// define('WP_SITEURL', 'http://test.mobile99.ru');
 
 
 /**#@+
