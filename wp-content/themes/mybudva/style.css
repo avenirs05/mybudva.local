@@ -423,6 +423,8 @@ a {
 	margin-top: 85px;
 	margin-bottom: 20px;
 	text-align: center;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 
 .about-us-post {
@@ -694,3 +696,22 @@ div[aria-describedby=dialog-menu-mob] >
 	background-color: #E4FDE1;
 	border: none;
 }
+
+div[aria-describedby=dialog-menu-mob] button[type=button] {
+	background-color: #000;
+}
+
+div[aria-describedby="dialog-menu-mob"] #dialog-menu-mob {
+	background-color: #000;
+}
+
+div[aria-describedby="dialog-menu-mob"] > .ui-widget-header {
+	background-color: #000;
+}
+
+div.ui-widget.ui-widget-content[aria-describedby="dialog-menu-mob"] {
+	background-color: #000;
+	border-radius: 4px;
+
+}
+

@@ -1,11 +1,98 @@
 <?php 
 
+/**
+ * WordPress Bootstrap Pagination
+ */
+
+function mybudva_pagination( $args = array() ) {
+    
+    $defaults = array(
+        'range'           => 4,
+        'custom_query'    => FALSE,
+        'previous_string' => __( 'Previous', 'text-domain' ),
+        'next_string'     => __( 'Next', 'text-domain' ),
+        'before_output'   => '<div class="post-nav"><ul class="pager">',
+        'after_output'    => '</ul></div>'
+    );
+    
+    $args = wp_parse_args( 
+        $args, 
+        apply_filters( 'wp_bootstrap_pagination_defaults', $defaults )
+    );
+    
+    $args['range'] = (int) $args['range'] - 1;
+    if ( !$args['custom_query'] )
+        $args['custom_query'] = @$GLOBALS['wp_query'];
+    $count = (int) $args['custom_query']->max_num_pages;
+    $page  = intval( get_query_var( 'paged' ) );
+    $ceil  = ceil( $args['range'] / 2 );
+    
+    if ( $count <= 1 )
+        return FALSE;
+    
+    if ( !$page )
+        $page = 1;
+    
+    if ( $count > $args['range'] ) {
+        if ( $page <= $args['range'] ) {
+            $min = 1;
+            $max = $args['range'] + 1;
+        } elseif ( $page >= ($count - $ceil) ) {
+            $min = $count - $args['range'];
+            $max = $count;
+        } elseif ( $page >= $args['range'] && $page < ($count - $ceil) ) {
+            $min = $page - $ceil;
+            $max = $page + $ceil;
+        }
+    } else {
+        $min = 1;
+        $max = $count;
+    }
+    
+    $echo = '';
+    $previous = intval($page) - 1;
+    $previous = esc_attr( get_pagenum_link($previous) );
+    
+    $firstpage = esc_attr( get_pagenum_link(1) );
+    if ( $firstpage && (1 != $page) )
+        $echo .= '<li class="previous"><a href="' . $firstpage . '">' . __( 'First', 'text-domain' ) . '</a></li>';
+
+    if ( $previous && (1 != $page) )
+        $echo .= '<li><a href="' . $previous . '" title="' . __( 'previous', 'text-domain') . '">' . $args['previous_string'] . '</a></li>';
+    
+    if ( !empty($min) && !empty($max) ) {
+        for( $i = $min; $i <= $max; $i++ ) {
+            if ($page == $i) {
+                $echo .= '<li class="active"><span class="active">' . str_pad( (int)$i, 2, '0', STR_PAD_LEFT ) . '</span></li>';
+            } else {
+                $echo .= sprintf( '<li><a href="%s">%002d</a></li>', esc_attr( get_pagenum_link($i) ), $i );
+            }
+        }
+    }
+    
+    $next = intval($page) + 1;
+    $next = esc_attr( get_pagenum_link($next) );
+    if ($next && ($count != $page) )
+        $echo .= '<li><a href="' . $next . '" title="' . __( 'next', 'text-domain') . '">' . $args['next_string'] . '</a></li>';
+    
+    $lastpage = esc_attr( get_pagenum_link($count) );
+    if ( $lastpage ) {
+        $echo .= '<li class="next"><a href="' . $lastpage . '">' . __( 'Last', 'text-domain' ) . '</a></li>';
+    }
+
+    if ( isset($echo) )
+        echo $args['before_output'] . $echo . $args['after_output'];
+}
+/**
+ * WordPress Bootstrap Pagination
+ */
+
+
 function load_style_scripts () 
 {
 	wp_enqueue_script('jquery_my', get_template_directory_uri() . '/js/jquery-3.1.1.js');
 	wp_enqueue_script('jquery_ui_my', get_template_directory_uri() . '/js/jquery-ui.min.js');
 	// wp_enqueue_script('jquery_my', get_template_directory_uri() . '/js/bootstrap.js');
-
 	wp_enqueue_style('bootstrap_my', get_template_directory_uri() . '/css/bootstrap.min.css');
 	wp_enqueue_style('jquery_ui_css_my', get_template_directory_uri() . '/css/jquery-ui.min.css');
 	wp_enqueue_style('jquery_ui_theme_css_my', get_template_directory_uri() . '/css/jquery-ui.theme.css');
@@ -27,6 +114,27 @@ register_sidebar(array(
 ));
 
 add_theme_support( 'post-thumbnails' );
+
+function wp_corenavi() {
+	global $wp_query, $wp_rewrite;
+	$pages = '';
+	$max = $wp_query->max_num_pages;
+	if (!$current = get_query_var('paged')) $current = 1;
+	$a['base'] = str_replace(999999999, '%#%', get_pagenum_link(999999999));
+	$a['total'] = $max;
+	$a['current'] = $current;
+	 
+	$total = 0; //1 - выводить текст "Страница N из N", 0 - не выводить
+	$a['mid_size'] = 1; //сколько ссылок показывать слева и справа от текущей
+	$a['end_size'] = 1; //сколько ссылок показывать в начале и в конце
+	$a['prev_text'] = ''; //текст ссылки "Предыдущая страница"
+	$a['next_text'] = ''; //текст ссылки "Следующая страница"
+	 
+	if ($max > 1) echo '<nav class="navigation">';
+	if ($total == 1 && $max > 1) $pages = '<span class="pages">Страница ' . $current . ' из ' . $max . '</span>'."\r\n";
+	echo $pages . paginate_links($a);
+	if ($max > 1) echo '</nav>';
+}
 
 // Нумерация записей wordpress
 // function PostNumbers() {

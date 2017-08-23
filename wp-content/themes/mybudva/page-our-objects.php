@@ -5,16 +5,20 @@
 	<div class="row">
 		<div class="our-objects">
 			<h2 class="about-us-h2">Примеры некоторых наших объектов за сезон 2016г.</h2>
-
-			<?php $query_obj_gal = new WP_Query(array (	'category_name' => 'obj_gal')); ?>			
-			<?php if ($query_obj_gal->have_posts()) : while (		
-				$query_obj_gal->have_posts()) : $query_obj_gal->the_post()?>
-				
+			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
+			
+			<?php $wp_query = new WP_Query( array (
+				'category_name' => 'obj_gal',
+				'posts_per_page'=> 2,
+				'paged' => $paged,
+			) ); ?>
+			
+			<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>					
 				<h3 class="bold"><?php the_title(); ?></h3>  
-		        <?php the_content(); ?>     
-				
+		        <?php the_content(); ?>   
 			<?php endwhile; ?>
-			<?php endif; ?>
+			
+			<?php the_posts_pagination(); ?>
 		</div>
 	</div>
 </div>
@@ -23,20 +27,23 @@
 	<div class="row">
 		<div class="our-objects-mob">
 			<h3 class="h-mob">Примеры некоторых наших объектов за сезон 2016г.</h3>
-
-			<?php $query_obj_gal_mob = new WP_Query(array (	'category_name' => 'obj_gal_mob')); ?>			
-			<?php if ($query_obj_gal_mob->have_posts()) : while (		
-				$query_obj_gal_mob->have_posts()) : $query_obj_gal_mob->the_post()?>
+				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 				
-				<h5 class="bold"><?php the_title(); ?></h5>  
-		        <?php the_content(); ?>     
+				<?php $wp_query = new WP_Query( array (
+					'category_name' => 'obj_gal_mob',
+					'posts_per_page'=> 2,
+					'paged' => $paged,
+				) ); ?>
 				
-			<?php endwhile; ?>
-			<?php endif; ?>
+				<?php while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?>					
+					<h5 class="bold"><?php the_title(); ?></h3>  
+			        <?php the_content(); ?>   
+				<?php endwhile; ?>
+				
+				<?php the_posts_pagination(); ?>	
 		</div>
 	</div>
 </div>
-
 
 
 
