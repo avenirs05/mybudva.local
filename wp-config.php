@@ -36,8 +36,8 @@ define('DB_COLLATE', '');
 // define('DB_HOST', 'u475861.mysql.masterhost.ru');
 // define('DB_CHARSET', 'utf8mb4');
 // define('DB_COLLATE', '');
-// define('WP_HOME', 'http://test.mobile99.ru');
-// define('WP_SITEURL', 'http://test.mobile99.ru');
+// define('WP_HOME', 'http://mybudva.com');
+// define('WP_SITEURL', 'http://mybudva.com');
 
 
 /**#@+

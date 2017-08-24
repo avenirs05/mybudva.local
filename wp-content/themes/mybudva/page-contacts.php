@@ -9,9 +9,10 @@
 				Bar, bul. Revolucije Biznes Centar Kula A<br>
 				Registarski broj 5-0707128<br>
 				PIB 03012034<br><br>				 
-				Тел.: +382 67 258 666<br>				 
-				info@mybudva.com</p>
+				<span class="bold">Тел.:</span> +382 67 258 666<br>				 
+				<span class="bold">Email:</span> info@mybudva.com</p>
         </div>
     </div>
 </div>
+
 <?php get_footer(); ?>

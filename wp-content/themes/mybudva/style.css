@@ -417,6 +417,7 @@ a {
 	margin-top: 25px;
 	margin-bottom: 20px;
 	text-align: center;
+	font-size: 24px;
 }
 
 .h-mob {
@@ -572,7 +573,6 @@ div[aria-describedby=dialog-menu-mob]
 	padding-right: 20px;
 }
 
-
 div[aria-describedby=dialog-menu-mob] 
 button[type=button] {
 	z-index: 1000;
@@ -676,6 +676,24 @@ and (max-device-width: 767px) {
 		margin-right: 0;
 	}
 
+}
+
+@media screen 
+and (max-device-width: 1365px) {
+	.to-fixed {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+
+/*Навигация от Wordpress*/
+
+.nav-links {
+	text-align: center;
+	font-size: 22px;
+	margin-top: 30px;
 }
 
 /*Bootstrap переопределенные стили*/
