@@ -21,7 +21,7 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define('DB_NAME', 'mybudva');
+define('DB_NAME', 'mybudva-com');
 define('DB_USER', 'root');
 define('DB_PASSWORD', '');
 define('DB_HOST', 'localhost');
