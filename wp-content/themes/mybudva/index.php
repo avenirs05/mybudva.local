@@ -61,7 +61,7 @@
 <div class="container-fluid examples">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
-            <h2>Примеры нашей работы в цифрах за 2016г.</h2>
+            <h2>Примеры нашей работы в цифрах за 2017г.</h2>
             <?php $query_obj = new WP_Query(array ('post_type' => 'object')); ?>
             <?php if ($query_obj->have_posts()) : while ($query_obj->have_posts()) : $query_obj->the_post(); ?>
             <div class="examples-obj">
@@ -70,10 +70,10 @@
                     <li class="li-obj"><span class="bold">Цена объекта:</span> <?php  echo types_render_field( "price_of_obj", array() ); ?> </li>
                     <li class="li-obj"><span class="bold">Начало сотрудничества:</span> <?php  echo types_render_field( "start_of_partnership", array() ); ?> </li>
                     <li class="li-obj"><span class="bold">Вложения перед сезоном:</span> <?php  echo types_render_field( "investments", array() ); ?> </li>
-                    <li class="li-obj"><span class="bold">Финансовый результат в 2015г.:</span> <?php  echo types_render_field( "financial_results", array() ); ?> </li>
+                    <li class="li-obj"><span class="bold">Финансовый результат в 2016г.:</span> <?php  echo types_render_field( "financial_results", array() ); ?> </li>
                     <li>
                     <br>
-                    <span class="bold">Заполняемость в сезон 2016г.:</span>
+                    <span class="bold">Заполняемость в сезон 2017г.:</span>
                         <ul>          
                             <li class="li-obj">Май – <?php  echo types_render_field( "may", array() ); ?> </li> 
                             <li class="li-obj">Июнь – <?php  echo types_render_field( "june", array() ); ?> </li> 
@@ -88,7 +88,7 @@
                     <li class="li-obj"><span class="bold">Расходы на коммунальные услуги, уборку, мелкий ремонт, налоги:</span> <?php  echo types_render_field( "costs", array() ); ?> </li>
                     <li class="li-obj"><span class="bold">Наше вознаграждение:</span> <?php  echo types_render_field( "revenue", array() ); ?> </li>
                     <li class="li-obj"><span class="bold">Чистый доход собственника:</span> <span class="red bold"> <?php  echo types_render_field( "net_income", array() ); ?> </span> </li>
-                    <li class="li-obj"><span class="bold">Ожидаемая средняя заполняемость в 2017г.:</span> <?php  echo types_render_field( "capacity", array() ); ?> </li>
+                    <li class="li-obj"><span class="bold">Ожидаемая средняя заполняемость в 2018г.:</span> <?php  echo types_render_field( "capacity", array() ); ?> </li>
                 </ul>
             </div>                             
             <?php endwhile; ?>

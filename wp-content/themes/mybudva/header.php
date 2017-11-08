@@ -76,7 +76,7 @@
                     <div class="header-phone-img glyphicon glyphicon-earphone" aria-hidden="true">      
                     </div>
                     <div class="header-phone-digits">
-                        +382 67 258 666
+                        +382 68 642 007
                     </div>
                 </div>
                 <div class="header-callback">
@@ -110,7 +110,7 @@
             <div class="header-phone-mob">
                 <div class="header-phone-img-mob glyphicon glyphicon-earphone" aria-hidden="true">
                 </div>
-                <div class="header-phone-digits-mob">+382 67 258 666</div>
+                <div class="header-phone-digits-mob">+382 68 642 007</div>
             </div>        
         </div>    
     </div>

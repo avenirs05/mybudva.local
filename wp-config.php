@@ -21,23 +21,25 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 
-define('DB_NAME', 'mybudva-com');
-define('DB_USER', 'root');
-define('DB_PASSWORD', '');
-define('DB_HOST', 'localhost');
-define('DB_CHARSET', 'utf8mb4');
-define('DB_COLLATE', '');
-
-
-
-// define('DB_NAME', 'u475861_3');
-// define('DB_USER', 'u475861_2');
-// define('DB_PASSWORD', 'i_G4o_6NGs');
-// define('DB_HOST', 'u475861.mysql.masterhost.ru');
+// define('DB_NAME', 'mybudva-com');
+// define('DB_USER', 'root');
+// define('DB_PASSWORD', '');
+// define('DB_HOST', 'localhost');
 // define('DB_CHARSET', 'utf8mb4');
 // define('DB_COLLATE', '');
-// define('WP_HOME', 'http://mybudva.com');
-// define('WP_SITEURL', 'http://mybudva.com');
+// define('WP_HOME', 'http://mybudva.com.local');
+// define('WP_SITEURL', 'http://mybudva.com.local');
+
+
+
+define('DB_NAME', 'u475861_3');
+define('DB_USER', 'u475861_2');
+define('DB_PASSWORD', 'i_G4o_6NGs');
+define('DB_HOST', 'u475861.mysql.masterhost.ru');
+define('DB_CHARSET', 'utf8mb4');
+define('DB_COLLATE', '');
+define('WP_HOME', 'http://mybudva.com');
+define('WP_SITEURL', 'http://mybudva.com');
 
 
 /**#@+

@@ -9,7 +9,7 @@
 			
 			<?php $wp_query = new WP_Query( array (
 				'category_name' => 'obj_gal',
-				'posts_per_page'=> 2,
+				'posts_per_page'=> 3,
 				'paged' => $paged,
 			) ); ?>
 			
@@ -64,8 +64,5 @@
 		</div>
 	</div>
 </div>
-
-
-
 
 <?php get_footer(); ?>
