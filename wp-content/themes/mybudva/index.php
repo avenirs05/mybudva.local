@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-md-12">
             <h2 class="main-screen-offset-mob">Профессиональное управление недвижимостью в Черногории</h2>
-            <h4>Ваша недвижимость перестанет быть бременем и начнет приносить доход уже летом 2017 года!</h4>
+            <h4>Ваша недвижимость перестанет быть бременем и начнет приносить доход уже летом 2018 года!</h4>
             <div class="container-fluid visible-md-block visible-lg-block">
                 <div class="row">
                     <div class="col-md-12">

@@ -4,7 +4,7 @@
 <div class="container-fluid visible-md-block visible-lg-block about-us">
 	<div class="row">
 		<div class="our-objects">
-			<h2 class="about-us-h2">Примеры некоторых наших объектов за сезон 2016г.</h2>
+			<h2 class="about-us-h2">Примеры некоторых наших объектов за сезон 2017г.</h2>
 			<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 			
 			<?php $wp_query = new WP_Query( array (
@@ -36,7 +36,7 @@
 <div class="container-fluid visible-xs-block visible-sm-block about-us">
 	<div class="row">
 		<div class="our-objects-mob">
-			<h3 class="h-mob">Примеры некоторых наших объектов за сезон 2016г.</h3>
+			<h3 class="h-mob">Примеры некоторых наших объектов за сезон 2017г.</h3>
 				<?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1; ?>
 				
 				<?php $wp_query = new WP_Query( array (

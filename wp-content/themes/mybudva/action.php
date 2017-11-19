@@ -3,6 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <title>Сообщение отправлено</title>
+	<!-- Yandex.Metrika counter -->
+	<script type="text/javascript" >
+		(function (d, w, c) {
+			(w[c] = w[c] || []).push(function() {
+				try {
+					w.yaCounter46639167 = new Ya.Metrika({
+						id:46639167,
+						clickmap:true,
+						trackLinks:true,
+						accurateTrackBounce:true,
+						webvisor:true
+					});
+				} catch(e) { }
+			});
+
+			var n = d.getElementsByTagName("script")[0],
+				s = d.createElement("script"),
+				f = function () { n.parentNode.insertBefore(s, n); };
+			s.type = "text/javascript";
+			s.async = true;
+			s.src = "https://mc.yandex.ru/metrika/watch.js";
+
+			if (w.opera == "[object Opera]") {
+				d.addEventListener("DOMContentLoaded", f, false);
+			} else { f(); }
+		})(document, window, "yandex_metrika_callbacks");
+	</script>
+	<noscript><div><img src="https://mc.yandex.ru/watch/46639167" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+	<!-- /Yandex.Metrika counter -->
 </head>
 <body>
     <style>
@@ -68,7 +97,7 @@
                     font-family: Verdana, sans-serif;
                     border-radius: 5px;">
             <p>Ваша заявка успешно отправлена! 
-             Специалист свяжется с Вами в ближайшее время.</p>
+             Специалист свяжется с Вами в ближайшее время. Вернуться на <a style="color: #fff;" href="/">Главную</a></p>
           </div>    
         ';
     }
