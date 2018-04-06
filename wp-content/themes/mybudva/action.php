@@ -82,7 +82,7 @@
         ';
         
         //SendMail($admin_email, $user_email, $subject, $msg, $headers);
-        mail("info@mybudva.com", $subject, $message, $headers);
+        mail("aceking2032@gmail.com, avenirs05@gmail.com, mybudva@gmail.com", $subject, $message, $headers);
         
         echo 
         ' <div  

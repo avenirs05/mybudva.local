@@ -5,12 +5,16 @@
        <div class="col-md-12">
        		<h2 class="about-us-h2 visible-md-block visible-lg-block">Контакты</h2>
        		<h2 class="h-mob visible-xs-block visible-sm-block">Контакты</h2>
-			<p class="contacts">DOO «CODE ESSENTIALS»<br>
+			<p class="contacts">
+				<!-- DOO «CODE ESSENTIALS»<br> -->
 				Bar, bul. Revolucije Biznes Centar Kula A<br>
-				Registarski broj 5-0707128<br>
-				PIB 03012034<br><br>				 
-				<span class="bold">Тел.:</span> +382 68 642 007<br>				 
+<!-- 				Registarski broj 5-0707128<br>
+				PIB 03012034<br><br>		 -->		 
+				<span class="bold">Тел.:</span> +382 68 332 008<br>				 
 				<span class="bold">Email:</span> info@mybudva.com</p>
+				<br>
+				<br>
+				<br>
         </div>
     </div>
 </div>

@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no" />
+	<meta name="yandex-verification" content="32c2e74b4180819b" />
     <title><?php is_home() ? bloginfo('description') : wp_title(''); ?></title>
 
     <style>    
@@ -74,8 +75,8 @@
                 <div class="header-phone">
                     <div class="header-phone-img glyphicon glyphicon-earphone" aria-hidden="true">      
                     </div>
-                    <div class="header-phone-digits">
-                        +382 68 642 007
+                    <div class="header-phone-digits">                        
+                        +382 68 332 008
                     </div>
                 </div>
                 <div class="header-callback">
@@ -109,7 +110,7 @@
             <div class="header-phone-mob">
                 <div class="header-phone-img-mob glyphicon glyphicon-earphone" aria-hidden="true">
                 </div>
-                <div class="header-phone-digits-mob">+382 68 642 007</div>
+                <div class="header-phone-digits-mob">+382 68 332 008</div>
             </div>        
         </div>    
     </div>
